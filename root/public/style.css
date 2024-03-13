@@ -1,0 +1,250 @@
+:root {
+    --cor-primaria: #2c2c2bd5;
+    --cor-secundaria: #b8a454;
+    --cor-terciaria: #a57b201c;
+    /* Creme */
+    --cor-bordas: #fffdca;
+    /* Creme escuro*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+
+}
+
+/* google icons */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(108, 105, 255);
+    border-radius: 0px 0px 110px 100px;
+    padding-bottom: 230px;
+    color: white;
+}
+
+.name_poke {
+    color: rgb(255, 246, 115);
+
+}
+
+.imgPoke {
+    background-color: #4400ff33;
+    border-radius: 90% 900px;
+}
+
+.hrTitulo {
+    height: 10px;
+    background: linear-gradient(to left, var(--cor-terciaria), var(--cor-secundaria));
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 1px 80px;
+}
+
+.headerPoke {
+    text-align: center;
+}
+
+.hrPoke {
+    width: 280px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+}
+
+.pokeOne {
+    width: 300px;
+    height: 600px;
+    background: #07065aa9;
+    border: 1px var(--cor-bordas);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 50px;
+    box-shadow: 1px 7px 80px #522cf87c,
+        10px 10px 1px #7392f8;
+    transition: 0.1s linear;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contentPoke {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgPoke {
+    width: 280px;
+    object-fit: contain;
+    border: 3px var(--cor-secundaria);
+}
+
+.pokeOne:hover {
+    animation: pokeAnimation 4s ease-in-out;
+    box-shadow: 1px 7px 80px #e093037c,
+        10px 10px 2px #e4c410;
+    background-size: 200% 100%;
+    transform: scale(1.030) translateY(-8px);
+    cursor: pointer;
+}
+
+.pokeOne:active {
+    box-shadow: 1px 7px 80px #9959057c,
+        -0px 0px 90px #ca7c0577;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    /* Centralizar horizontalmente */
+}
+
+.FooterPoke {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer {
+    background-color: rgb(108, 105, 255);
+    color: white;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    margin: 25px 40px;
+    box-shadow: 1px 7px 80px #522cf87c,
+        10px 10px 1px #1638a7;
+}
+
+footer:hover {
+    transform: scale(1.023);
+}
+
+.page {
+    width: 100px;
+    height: 100px;
+    margin: 20px 40px;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover,
+.icon4:hover {
+    transform: scale(1.075);
+}
+
+
+.social {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.refer {
+    width: 400px;
+    height: 100px;
+    margin: 80px;
+    text-align: center;
+}
+
+.refer hr {
+    margin-bottom: 10px;
+}
+
+.iconGo {
+    width: 200px;
+    margin-bottom: 20px;
+    height: 100px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s linear;
+}
+
+#ButtonGo {
+    transform: scale(3.50);
+    cursor: pointer;
+    transition: 0.9s linear;
+}
+
+
+
+.iconGo:hover {
+    animation: buttonGo 1s infinite ease-in-out;
+
+}
+
+
+@keyframes pokeAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes buttonGo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
