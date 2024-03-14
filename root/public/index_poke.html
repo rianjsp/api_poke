@@ -117,29 +117,38 @@
                                 <img id="pokeImg${id}" src="${data.sprites.front_default}" alt="PokeIMG" class="imgPoke">
                                 <hr class="hrPoke">
                             </div>
-                            <div class"Content_poke">
+                            <div class"Content_poke" >
                                 
                                 <div class="ConteudoDentro">
                                     <span >Nome</span>
-                                    <span id="Poder">Poder</span>
+                                    <span id="Nome">Poder</span>
                                 </div>
                                 <div class="ConteudoDentro">
-                                    <span id="">Poder</span>
-                                    <span>Poder</span>
+                                    <span >Habilidade Primaria</span>
+                                    <span id="Habilities_1"></span>
                                 </div>
                                 <div class="ConteudoDentro">
-                                    <span>Poder</span>
-                                    <span>Poder</span>
+                                    <span>Habilidade Secundaria</span>
+                                    <span id="Habilities_2"></span>
                                 </div>
                                 <div class="ConteudoDentro">
-                                    <span>Poder</span>
-                                    <span>Poder</span>
+                                    <span>Altura do pokemon</span>
+                                    <span id="Altura"></span>
                                 </div>
-                                <hr class="hrPoke">
+                                <div class="ConteudoDentro">
+                                    <span>Peso do pokemon</span>
+                                    <span id="Peso"></span>
+                                </div>
+                               
+                                
                             </div>
                         `;
 
-                        card.querySelector('#Poder').innerHTML = `${data.forms[0].name.toUpperCase()}`
+                        card.querySelector('#Nome').innerHTML = `${data.forms[0].name}`;
+                        card.querySelector('#Habilities_1').innerHTML = `${data.abilities[0].ability.name}`;
+                        card.querySelector('#Habilities_2').innerHTML = `${data.abilities[1].ability.name}`;
+                        card.querySelector('#Altura').innerHTML = `${data.height}`;
+                        card.querySelector('#Peso').innerHTML = `${data.weight}`
                         container.appendChild(card);
                     })
                     .catch(error => {
