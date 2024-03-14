@@ -3,6 +3,9 @@
 
 Um breve exercicio de consumo de api, com a api gratuita do pokeApi, de maneira tranquila avançando nos estudos, consegui fazer este projeto que visa mostrar como funciona o consumo da api.
 
+## Linguagem utilizada / Biblioteca
+- JavaScript / express.js
+- Bootstrap
 
 ## Referência
 
